@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FragmentMainMenu">
+
+    <fragment
+        android:id="@+id/FragmentMainMenu"
+        android:name="com.filoware.soundcolorcode.FragmentMainMenu"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_main_menu">
+
+        <action
+            android:id="@+id/action_FragmentMainMenu_to_FragmentLesson"
+            app:destination="@id/FragmentLearn" />
+        <action
+            android:id="@+id/action_FragmentMainMenu_to_FragmentQuiz"
+            app:destination="@id/FragmentQuiz" />
+        <action
+            android:id="@+id/action_FragmentMainMenu_to_FragmentExplore"
+            app:destination="@id/FragmentExplore" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentLearn"
+        android:name="com.filoware.soundcolorcode.FragmentLearn"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_learn">
+
+        <action
+            android:id="@+id/action_FragmentLearn_to_FragmentMainMenu"
+            app:destination="@id/FragmentMainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentQuiz"
+        android:name="com.filoware.soundcolorcode.FragmentQuiz"
+        android:label="@string/third_fragment_label"
+        tools:layout="@layout/fragment_quiz">
+
+        <action
+            android:id="@+id/action_FragmentQuiz_to_FragmentMainMenu"
+            app:destination="@id/FragmentMainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/FragmentExplore"
+        android:name="com.filoware.soundcolorcode.FragmentExplore"
+        android:label="@string/fourth_fragment_label"
+        tools:layout="@layout/fragment_explore">
+
+        <action
+            android:id="@+id/action_FragmentExplore_to_FragmentMainMenu"
+            app:destination="@id/FragmentMainMenu" />
+    </fragment>
+</navigation>
